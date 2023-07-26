@@ -75,7 +75,7 @@ if [ $SSL = "true" ] ; then
   SSLF="" ; fi
 
 if [ $DEBUG = "false" ] ; then
-  $NYUU --nzb-password -h "$HOST" -P "$PORT" "$SSLF" -u "$USER" -p "$PASS" -n "$MAXCO" -a "$ASIZE" -f "$POSTER" -g "$GROUP" -o "$CPL/$NAME.nzb" $TMP/* ; else
+  $NYUU --nzb-password "$KEY" -h "$HOST" -P "$PORT" "$SSLF" -u "$USER" -p "$PASS" -n "$MAXCO" -a "$ASIZE" -f "$POSTER" -g "$GROUP" -o "$CPL/$NAME.nzb" $TMP/* ; else
   echo "(SKIPPED)" ; fi
 
 echo "--- Step 5 - Cleaning Up ---"
